@@ -190,16 +190,17 @@
       const pending = rows.filter(row => row.dataset.status === "pending").length;
       const patientTotal = new Set(rows.map(row => getPatientMeta(row).key)).size;
       const doneAll = rows.length > 0 && pending === 0;
-      const isStatSection = section.dataset.sectionTime === "stat";
       const summary = section.querySelector(".section-title small");
       const badge = section.querySelector(".pending-count");
       const timeItem = timeItems.find(item => item.dataset.time === section.dataset.sectionTime);
       const timeCount = timeItem?.querySelector("[data-count]");
 
       if (summary) {
-        summary.textContent = isStatSection
-          ? `${rows.length} 筆 STAT`
-          : `${rows.length} 筆給藥 · ${patientTotal} 位病人`;
+        summary.classList.add("section-metrics");
+        summary.innerHTML = `
+          <span class="section-metric med-count"><i aria-hidden="true"></i><b>${rows.length}</b>筆</span>
+          <span class="section-metric patient-count"><i aria-hidden="true"></i><b>${patientTotal}</b>位</span>
+        `;
       }
 
       if (timeCount) timeCount.textContent = `${rows.length} 筆`;

@@ -39,8 +39,8 @@
       <section class="hero-row" aria-label="給藥摘要">
         <div class="page-heading">
           <div>
-            <h1>本日給藥提醒</h1>
-            <p>2026/09/04</p>
+            <h1>給藥提醒</h1>
+            <p>2026/09/04 (本日)</p>
           </div>
         </div>
 
@@ -65,7 +65,7 @@
           <div class="progress-card-bottom">
             <div class="progress-info"><span>待給藥</span><strong id="pendingCount">7</strong><small>筆</small></div>
             <div class="progress-divider" aria-hidden="true"></div>
-            <div class="progress-info"><span>立即給藥</span><strong id="statSummaryCount">2</strong><small>筆</small></div>
+            <div class="progress-info stat-progress-info"><span class="stat-warning-icon" aria-hidden="true">!</span><span>立即給藥</span><strong id="statSummaryCount">2</strong><small>筆</small></div>
             <div class="progress-divider desktop-only" aria-hidden="true"></div>
             <div class="progress-info"><span>今日病人</span><strong id="patientCount">11</strong><small>位</small></div>
           </div>
@@ -125,7 +125,7 @@
         <div class="medication-list" id="medicationList">
           <section class="time-section stat-section collapsed " data-section-time="stat">
             <button class="time-header" type="button" aria-expanded="false">
-              <span class="section-title"><strong>立即給藥</strong><small>2 筆 STAT</small></span>
+              <span class="section-title"><strong>立即給藥</strong><small class="section-metrics"><span class="section-metric med-count"><i aria-hidden="true"></i><b>2</b>筆</span><span class="section-metric patient-count"><i aria-hidden="true"></i><b>2</b>位</span></small></span>
               <span class="stat-section-badge">STAT</span>
               <span class="arrow" aria-hidden="true">⌄</span>
             </button>
@@ -152,7 +152,7 @@
 
           <section class="time-section collapsed completed " data-section-time="19:00">
             <button class="time-header" type="button" aria-expanded="false">
-              <span class="section-title"><strong>19:00</strong><small>1 筆給藥 · 1 位病人</small></span>
+              <span class="section-title"><strong>19:00</strong><small class="section-metrics"><span class="section-metric med-count"><i aria-hidden="true"></i><b>1</b>筆</span><span class="section-metric patient-count"><i aria-hidden="true"></i><b>1</b>位</span></small></span>
               <span class="pending-count done-count">已完成</span><span class="arrow">⌄</span>
             </button>
             <div class="time-body">
@@ -168,7 +168,7 @@
 
           <section class="time-section collapsed completed " data-section-time="20:00">
             <button class="time-header" type="button" aria-expanded="false">
-              <span class="section-title"><strong>20:00</strong><small>2 筆給藥 · 2 位病人</small></span>
+              <span class="section-title"><strong>20:00</strong><small class="section-metrics"><span class="section-metric med-count"><i aria-hidden="true"></i><b>2</b>筆</span><span class="section-metric patient-count"><i aria-hidden="true"></i><b>2</b>位</span></small></span>
               <span class="pending-count done-count">已完成</span><span class="arrow">⌄</span>
             </button>
             <div class="time-body">
@@ -191,7 +191,7 @@
 
           <section class="time-section expanded" data-section-time="21:00">
             <button class="time-header" type="button" aria-expanded="true">
-              <span class="section-title"><strong>21:00</strong><small>3 筆給藥 · 3 位病人</small></span>
+              <span class="section-title"><strong>21:00</strong><small class="section-metrics"><span class="section-metric med-count"><i aria-hidden="true"></i><b>3</b>筆</span><span class="section-metric patient-count"><i aria-hidden="true"></i><b>3</b>位</span></small></span>
               <span class="section-legend"><i class="dot green-dot"></i>已完成 <i class="dot amber-dot"></i>待給藥</span>
               <span class="arrow">⌃</span>
             </button>
@@ -222,7 +222,7 @@
 
           <section class="time-section collapsed" data-section-time="22:00">
             <button class="time-header" type="button" aria-expanded="false">
-              <span class="section-title"><strong>22:00</strong><small>2 筆給藥 · 2 位病人</small></span>
+              <span class="section-title"><strong>22:00</strong><small class="section-metrics"><span class="section-metric med-count"><i aria-hidden="true"></i><b>2</b>筆</span><span class="section-metric patient-count"><i aria-hidden="true"></i><b>2</b>位</span></small></span>
               <span class="pending-count">2 待執行</span><span class="arrow">⌄</span>
             </button>
             <div class="time-body">
@@ -237,7 +237,7 @@
 
           <section class="time-section collapsed" data-section-time="23:00">
             <button class="time-header" type="button" aria-expanded="false">
-              <span class="section-title"><strong>23:00</strong><small>1 筆給藥 · 1 位病人</small></span>
+              <span class="section-title"><strong>23:00</strong><small class="section-metrics"><span class="section-metric med-count"><i aria-hidden="true"></i><b>1</b>筆</span><span class="section-metric patient-count"><i aria-hidden="true"></i><b>1</b>位</span></small></span>
               <span class="pending-count">1 待執行</span><span class="arrow">⌄</span>
             </button>
             <div class="time-body">
@@ -249,7 +249,7 @@
 
           <section class="time-section collapsed" data-section-time="00:00">
             <button class="time-header" type="button" aria-expanded="false">
-              <span class="section-title"><strong>00:00</strong><small>1 筆給藥 · 1 位病人</small></span>
+              <span class="section-title"><strong>00:00</strong><small class="section-metrics"><span class="section-metric med-count"><i aria-hidden="true"></i><b>1</b>筆</span><span class="section-metric patient-count"><i aria-hidden="true"></i><b>1</b>位</span></small></span>
               <span class="pending-count">1 待執行</span><span class="arrow">⌄</span>
             </button>
             <div class="time-body">

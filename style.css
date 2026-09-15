@@ -2857,3 +2857,177 @@ body.drawer-open {
 #timeList[hidden] {
   display: none !important;
 }
+
+/* =========================================================
+   Progress STAT warning + section count icons
+   ========================================================= */
+.stat-progress-info {
+  min-height: 30px;
+  padding: 4px 8px 4px 6px;
+  border-radius: 999px;
+}
+
+.stat-progress-info > span:not(.stat-warning-icon),
+.stat-progress-info small,
+.stat-progress-info strong {
+  color: #d92f65;
+}
+
+.stat-warning-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 20px;
+  border-radius: 50%;
+  background: #e93d6f;
+  color: #fff !important;
+  font-size: 12px;
+  font-weight: 950;
+  line-height: 1;
+  box-shadow: 0 0 0 3px rgba(233, 61, 111, .10);
+}
+
+.section-title .section-metrics {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.section-metric {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 27px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  color: #697a9e;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.section-metric b {
+  color: #243579;
+  font-size: 13px;
+  font-weight: 950;
+}
+
+.section-metric i {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  flex: 0 0 15px;
+}
+
+/* Medication icon: compact capsule */
+.section-metric.med-count i::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 4px;
+  width: 13px;
+  height: 7px;
+  border: 1.8px solid #58709f;
+  border-radius: 999px;
+  transform: rotate(-36deg);
+}
+
+.section-metric.med-count i::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 4px;
+  width: 1.5px;
+  height: 7px;
+  border-radius: 2px;
+  background: #58709f;
+  transform: rotate(-36deg);
+}
+
+/* Patient icon: head + shoulders */
+.section-metric.patient-count i::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 5px;
+  border: 1.7px solid #58709f;
+  border-radius: 50%;
+}
+
+.section-metric.patient-count i::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  bottom: 0;
+  width: 11px;
+  height: 6px;
+  border: 1.7px solid #58709f;
+  border-bottom: 0;
+  border-radius: 8px 8px 0 0;
+}
+
+.stat-section .section-metric {
+  background: #fff0f4;
+  color: #c94a70;
+}
+
+.stat-section .section-metric b {
+  color: #d92f65;
+}
+
+.stat-section .section-metric i::before {
+  border-color: #cf5a7d;
+}
+
+.stat-section .section-metric.med-count i::after {
+  background: #cf5a7d;
+}
+
+.stat-section .section-metric.patient-count i::after {
+  border-color: #cf5a7d;
+}
+
+@media (max-width:767px) {
+  .stat-progress-info {
+    min-height: 26px;
+    padding: 3px 6px 3px 4px;
+    gap: 4px;
+  }
+
+  .stat-warning-icon {
+    width: 17px;
+    height: 17px;
+    flex-basis: 17px;
+    font-size: 10px;
+    box-shadow: 0 0 0 2px rgba(233, 61, 111, .10);
+  }
+
+  .section-title .section-metrics {
+    gap: 5px;
+  }
+
+  .section-metric {
+    min-height: 23px;
+    padding: 3px 6px;
+    font-size: 10px;
+  }
+
+  .section-metric b {
+    font-size: 11px;
+  }
+
+  .section-metric i {
+    width: 13px;
+    height: 13px;
+    flex-basis: 13px;
+    transform: scale(.88);
+    transform-origin: center;
+  }
+}
